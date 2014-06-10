@@ -1,5 +1,3 @@
-#!/usr/bin/env lua
-
 function parent_string(level)
   local ats = { '@' }
   local parents = { }
@@ -20,13 +18,6 @@ function parent_string(level)
 
 
   return table.concat(ats, '') .. table.concat(parents, '')
-end
-
--- if command-line usage:
-
-if arg and #arg > 0 then
-  local string = parent_string(tonumber(arg[1]))
-  print(string)
 end
 
 return parent_string
